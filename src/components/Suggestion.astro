@@ -1,0 +1,19 @@
+---
+import SuggestionProfile from "./SuggestionProfile.astro";
+---
+
+<article class="w-80 px-5 pt-8">
+  <SuggestionProfile isRecommended={false} profileName="Edwin Davila" />
+  <div class="flex items-center justify-between">
+    <span class="my-4 text-sm font-semibold text-gray-400"
+      >Sugerencias para ti</span
+    ><span class="text-xs">Ver todo</span>
+  </div>
+  <div class="flex flex-col gap-2">
+    <SuggestionProfile isRecommended={true} />
+    <SuggestionProfile isRecommended={true} />
+    <SuggestionProfile isRecommended={true} />
+    <SuggestionProfile isRecommended={true} />
+    <SuggestionProfile isRecommended={true} />
+  </div>
+</article>

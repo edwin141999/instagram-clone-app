@@ -1,0 +1,34 @@
+---
+import RoundedProfile from "../components/RoundedProfile.astro";
+
+interface Props {
+  isRecommended: boolean;
+  profileName?: string;
+}
+
+const { isRecommended, profileName } = Astro.props;
+
+const text = isRecommended ? "Seguir" : "Cambiar";
+const forYou = isRecommended ? "Sugerencia para ti" : profileName;
+---
+
+<div class="flex flex-row items-center justify-between">
+  <div class="flex items-center gap-3">
+    <RoundedProfile />
+    <div class="flex flex-col">
+      <span class="cursor-pointer text-sm">_edwin_davila</span>
+      <span
+        class:list={[
+          "text-gray-400",
+          {
+            "text-sm font-bold italic": !isRecommended,
+            "text-xs": isRecommended,
+          },
+        ]}>{forYou}</span
+      >
+    </div>
+  </div>
+  <span class="cursor-pointer text-xs text-blue-400 hover:text-white"
+    >{text}</span
+  >
+</div>

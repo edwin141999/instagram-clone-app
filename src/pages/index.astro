@@ -1,8 +1,14 @@
 ---
+import Feed from "../components/Feed.astro";
 import Navbar from "../components/Navbar.astro";
+import Suggestion from "../components/Suggestion.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Instagram Clone">
-  <Navbar />
+  <div class="flex flex-row">
+    <Navbar />
+    <Feed />
+    <Suggestion />
+  </div>
 </Layout>
