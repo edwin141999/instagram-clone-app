@@ -1,0 +1,21 @@
+---
+interface Props {
+  text: string;
+  src: string;
+  link: string;
+}
+const { text, src, link } = Astro.props;
+---
+
+<a href={link}>
+  <div
+    class="group flex cursor-pointer flex-row items-center space-x-3 rounded-lg p-2 transition-colors duration-500 hover:bg-gray-700"
+  >
+    <img
+      src={src}
+      alt="Home"
+      class="h-auto w-7 transition-transform duration-500 group-hover:scale-110"
+    />
+    <span class="text-white">{text}</span>
+  </div>
+</a>

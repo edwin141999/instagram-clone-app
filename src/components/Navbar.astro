@@ -1,0 +1,25 @@
+---
+import NavbarButton from "./NavbarButton.astro";
+---
+
+<div class="h-full min-h-screen w-60 border-r-2 border-gray-800 px-3">
+  <a href="/">
+    <img
+      src="/icons/instagram.svg"
+      alt="Instagram Text"
+      class="mx-2 h-auto w-24 cursor-pointer"
+    />
+  </a>
+  <div class="flex flex-col gap-3">
+    <NavbarButton text="Inicio" src="/icons/home.svg" link="/" />
+    <NavbarButton text="Buscar" src="/icons/search.svg" link="/" />
+    <NavbarButton text="Explorar" src="/icons/explore.svg" link="/" />
+    <NavbarButton text="Reels" src="/icons/reel.svg" link="/" />
+    <NavbarButton text="Mensajes" src="/icons/message.svg" link="/" />
+    <NavbarButton text="Notificaciones" src="/icons/heart.svg" link="/" />
+    <NavbarButton text="Crear" src="/icons/create.svg" link="/" />
+  </div>
+  <div class="pt-32">
+    <NavbarButton text="Más" src="/icons/menu.svg" link="/" />
+  </div>
+</div>
